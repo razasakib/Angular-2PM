@@ -12,7 +12,7 @@
     </script>
 </html> -->
 
-
+<!--
 <!DOCTYPE html>
 <html>
     <script>
@@ -38,6 +38,46 @@
         function add(){ return 10; }
     </script>
 </html>
+
+
+-->
+
+
+
+<!DOCTYPE html>
+<html>
+    <script>
+        function addition(val,callback){
+            return callback((val+5),false);
+        }
+        function subtraction(val,callback){
+            return callback((val-3),false);
+        }
+
+        addition(5,function(res,err){
+            if(!err){
+                subtraction(res,function(res1,err){
+                    if(!err){
+                        console.log(res1);
+                    }
+                });
+            }
+        });
+    </script>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
